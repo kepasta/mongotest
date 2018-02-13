@@ -2,7 +2,7 @@ import time
 import pymongo
 import dtppl
 
-m = pymongo.MongoClient()
+doc = pymongo.MongoClient()
 
 
 i = 0
