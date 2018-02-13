@@ -6,14 +6,9 @@ def pack(name, country, number, digits):
     rcountry = country[randcn]
     n = 0
     rnumber = number[randcn]
-    if randcn == 1 or randcn == 2 or randcn == 4:
-        while n < 9:
-            rnumber += digits[random.randrange(10)]
-            n += 1
-    else:
-        while n < 10:
-            rnumber += digits[random.randrange(10)]
-            n += 1
+    while n < 12 - len(number[randcn]):
+        rnumber += digits[random.randrange(10)]
+        n += 1
     return {'name' : rname, 'country' : rcountry, 'number' : rnumber}
 
 name = ['John', 'James', 'Hugh', 'Sam', 'Michael', 'Quentin', 'Harry', 'Gary', 'Ryan', 'Patrick', 'Daniel', 'Rick',
