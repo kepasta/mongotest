@@ -2,14 +2,15 @@ import time
 import pymongo
 import dtppl
 
-doc = pymongo.MongoClient()
+m = pymongo.MongoClient()
 
 
 i = 0
 
-while (i < 200):
 
-    doc = dtppl.pack(dtppl.name, dtppl.country, dtppl.number, dtppl.digits)
+while (i < 100000000):
+
+    doc = dtppl.pack(dtppl.appname, dtppl.methname, dtppl.message)
 
     start = time.time()
     m.tests.insertTest.insert(doc, manipulate=False, w=1)
