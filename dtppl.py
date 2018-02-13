@@ -1,19 +1,21 @@
 import random
 
-def pack(name, country, number, digits):
-    rname = name[random.randrange(len(name))]
-    randcn = random.randrange(len(country))
-    rcountry = country[randcn]
-    n = 0
-    rnumber = number[randcn]
-    while n < 12 - len(number[randcn]):
-        rnumber += digits[random.randrange(10)]
-        n += 1
-    return {'name' : rname, 'country' : rcountry, 'number' : rnumber}
+def pack():
 
-name = ['John', 'James', 'Hugh', 'Sam', 'Michael', 'Quentin', 'Harry', 'Gary', 'Ryan', 'Patrick', 'Daniel', 'Rick',
-        'Aaron', 'Robert', 'Richard',
-        'Tobey', 'Tom', 'Carl', 'Peter', 'Tyron', 'Chris', 'Benjamin', 'Bryan', 'Barry', 'Ivan', 'George']
-country = ['USA', 'Great Britain', 'France', 'Russian Federation', 'China', 'Canada']
-number = ['+1', '+44', '+33', '+7', '+86', '+1']
-digits = '1234567890'
+    appname = ['Google Chrome', 'Mozilla Firefox', 'Opera', 'Internet Explorer', 'Safari']
+    methname = ['try hard', 'die hard', 'go ahead', 'born to cry', "let's go", "what doesn't kill you", 'blahblahblah', 'purple cucumber']
+    message = ['gimme money', 'go to outer space', 'slice you nice', 'rabbit hole', 'unicorns and magic', 'look at my horse',
+           'cut my life into pieces', "i'm lovin' it", 'so good', 'collective unconsciousness', 'piglet', 'well done']
+    probnumber = str(random.randrange(1000000))
+    reqnumber = str(random.randrange(1000000000))
+    strnumber = str(random.randrange(1000000))
+    n = 0
+    ipaddr = ''
+    while n < 4:
+        ipaddr += str(random.randrange(256)) + '.'
+        n += 1
+    ipaddr = ipaddr[:len(ipaddr) - 2]
+    hour = random.randrange(24)
+    minute = random.randrange(60)
+    second = random.randrange(60)
+    msecond = random.randrange(1000)
