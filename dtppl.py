@@ -20,10 +20,11 @@ def pack(appname, methname, message):
     rappname = appname[random.randrange(len(appname))]
     rmethname = methname[random.randrange(len(methname))]
     rmessage = message[random.randrange(len(message))]
+    exectime = str(random.random())
 
     return {'Date/Time' : '2018 ' + '02 ' + day + ' ' + hour + ' ' + minute + ' ' + second + ' ' + msecond,'App name' : rappname,
             'Method name': rmethname, 'Ip-address' : ipaddr, 'Text message' : rmessage, 'Problem number' : probnumber,
-            'Stream number' : strnumber, 'Request number' : reqnumber}
+            'Stream number' : strnumber, 'Request number' : reqnumber, 'Execution time' : exectime}
 
 appname = ['Google Chrome', 'Mozilla Firefox', 'Opera', 'Internet Explorer', 'Safari']
 methname = ['try hard', 'die hard', 'go ahead', 'born to cry', "let's go", "what doesn't kill you", 'blahblahblah', 'purple cucumber']
