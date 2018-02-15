@@ -4,13 +4,13 @@ def sort(viborka):
     greater = []
 
     if len(viborka) > 1:
-        core = viborka[0][0]
+        core = viborka[0][1]
         for x in range(len(viborka)):
-            if viborka[x][0] < core:
+            if viborka[x][1] < core:
                 less.append(viborka[x])
-            if viborka[x][0] == core:
+            if viborka[x][1] == core:
                 equal.append(viborka[x])
-            if viborka[x][0] > core:
+            if viborka[x][1] > core:
                 greater.append(viborka[x])
         return sort(less) + equal + sort(greater)
     else:
